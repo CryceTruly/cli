@@ -1,0 +1,32 @@
+<nav class="black white-text lighten-3">
+  <div class="nav-wrapper container">
+    <a  class="brand-logo">{{appName}}</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-envelope"></i></a>
+    <ul class="right hide-on-med-and-down">
+        <li>
+            <a *ngIf="!(user|async)?.uid" href="#" (click)="login()">Login</a>
+          </li>
+        
+          <span>
+           <li><a id="userEmail" *ngIf="(user|async)?.uid">Hello, {{userEmail}}</a></li> 
+          </span>
+          <li>
+            <a *ngIf="(user|async)?.uid" href="#" (click)="logout()">Logout</a>
+          </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+
+        <li>
+            <a *ngIf="!(user|async)?.uid"  (click)="login()">Login</a>
+          </li>
+      
+          <span>
+           <li><a id="userEmail" *ngIf="(user|async)?.uid">Hello, {{userEmail}}</a></li> 
+          </span>
+          <li>
+            <a *ngIf="(user|async)?.uid" href="#" (click)="logout()">Logout</a>
+          </li>
+
+    </ul>
+  </div>
+</nav>

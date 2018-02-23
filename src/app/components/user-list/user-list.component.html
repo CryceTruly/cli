@@ -1,0 +1,16 @@
+<!-- ICON LIST -->
+<div class="available" *ngIf="chats ?.length>0;  else nochats">
+<h4 class="center">Chat List</h4>
+<ul class="collection" *ngFor="let chat of chats | async">
+   <li class="collection-item avatar">
+     <i class="fa fa-folder"></i>
+     <span class="title">{{chat.userName}}</span>
+     <p> {{chat.message}}
+     </p>
+     <a href="#!" class="secondary-content"><i class="fa fa-online"></i></a>
+    </li>
+ </ul>
+</div>
+ <ng-template #nochats>
+    <h5>No Chats yet</h5>
+  </ng-template>

@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col s10">
+    <div class="input-field chatInput">
+      <input type="text" id="name" placeholder="Type a new message"  [(ngModel)]="message" 
+      (keydown)="handleSubmit($event)">
+     
+    </div>
+    </div>
+
+    <div class="col s2">
+       <!-- FLOATING BUTTON -->
+       <a (click)="sendMessage();" class="btn-floating blue btn-large"><i class="fa fa-send"></i></a>
+    </div>
+  </div>
+
+
